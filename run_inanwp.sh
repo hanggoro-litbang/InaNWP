@@ -24,6 +24,8 @@
 # - make clean look                                          #
 # - split real, wrfvar, and wrf.exe processes                #
 # - use upp instead arwpost                                  #
+# 07 June 2023                                               #
+# - add arwpost and wrfupp selection                         #
 ##############################################################
 # START OF USER CONFIGURATION ##########################
 source ~/.bashrc
