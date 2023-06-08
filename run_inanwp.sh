@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 ##############################################################
 # Copyright (c) 2020-2023, Wido Hanggoro                     #
 # wido_hanggoro@yahoo.com                                    #
@@ -24,8 +25,6 @@
 # - make clean look                                          #
 # - split real, wrfvar, and wrf.exe processes                #
 # - use upp instead arwpost                                  #
-# 07 June 2023                                               #
-# - add arwpost and wrfupp selection                         #
 ##############################################################
 # START OF USER CONFIGURATION ##########################
 source ~/.bashrc
@@ -37,6 +36,7 @@ edate=${sdate}
 length=3
 step=3
 max_dom=3
+pproc=1
 ewe_1=621
 esn_1=312
 ewe_2=607
@@ -175,8 +175,17 @@ else
       # time ${scrp_dir}/upload.sh 										# added by den
       wait
 fi
-echo "step 9 run Post-processing WRF-UPP"
-time ${scrp_dir}/upp.sh
+echo "step 9 run Post-processing WRF-UPP or ARWPost"
+if [ ${pproc} -eq 1 ]; then
+   echo " Run ARWPost"
+   time ${scrp_dir}/arwpost.sh
+fi
+
+if [ ${pproc} -eq 2 ]; then
+   echo " Run WRF-UPP"
+   time ${scrp_dir}/upp.sh
+fi
+
 echo "step 10 kirim-kirim"
 ${scrp_dir}/kirim.sh
 
