@@ -27,11 +27,8 @@ done
 
 # The 3 variables below store server and login details
 HOST="192.168.222.20"
-USER="inanwpz"
-PASSWORD="Inanwpz1234"
-#HOST="ftp2.mfi.fr"
-#USER="bmkg-data"
-#PASSWORD="meteo_event"
+USER="user"
+PASSWORD="password"
 
 # $1 is the first argument to the script
 # We are using it as upload directory path
