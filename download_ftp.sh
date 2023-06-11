@@ -25,12 +25,12 @@ source ~/.bashrc
 mkdir -p ${sinop_dir}/${yyyy1}${mm1}${dd1}${cc}
 cd ${sinop_dir}/${yyyy1}${mm1}${dd1}${cc}
 
-for file in $(curl -s -u timmodelnwp:model@bmkg ftp://172.19.3.235:1603/Data4Asimilasi/${cc}/ | grep ${yyyy1}${mm1}${dd1}${cc})
+for file in $(curl -s -u user:password ftp://172.19.3.235:1603/Data4Asimilasi/${cc}/ | grep ${yyyy1}${mm1}${dd1}${cc})
 do
        if [ -e ${sinop_dir}/${yyyy1}${mm1}${dd1}${cc}/${file} ]; then
 	       echo "File $file exist, skipping"
        else
-	       curl -s -O -u timmodelnwp:model@bmkg ftp://172.19.3.235:1603/Data4Asimilasi/${cc}/${file}
+	       curl -s -O -u user:password ftp://172.19.3.235:1603/Data4Asimilasi/${cc}/${file}
        fi
 done
 
