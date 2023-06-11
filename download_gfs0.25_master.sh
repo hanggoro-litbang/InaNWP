@@ -48,11 +48,11 @@ then
   for fhr in `seq 0 ${step} ${lengthhour}`
   do
     if [[ ${fhr} -lt "10" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${gfilter_server}file=gfs.t${cc}z.pgrb2.0p25.f00${fhr}&all_lev=on&all_var=on&subregion=&leftlon=${ll}&rightlon=${rl}&toplat=${tl}&bottomlat=${bl}&dir=%2Fgfs.${yyyy1}${mm1}${dd1}%2F${cc}%2Fatmos"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${gfilter_server}file=gfs.t${cc}z.pgrb2.0p25.f00${fhr}&all_lev=on&all_var=on&subregion=&leftlon=${ll}&rightlon=${rl}&toplat=${tl}&bottomlat=${bl}&dir=%2Fgfs.${yyyy1}${mm1}${dd1}%2F${cc}%2Fatmos"
     elif [[ ${fhr} -ge "10" ]] && [[ ${fhr} -lt "100" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${gfilter_server}file=gfs.t${cc}z.pgrb2.0p25.f0${fhr}&all_lev=on&all_var=on&subregion=&leftlon=${ll}&rightlon=${rl}&toplat=${tl}&bottomlat=${bl}&dir=%2Fgfs.${yyyy1}${mm1}${dd1}%2F${cc}%2Fatmos"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${gfilter_server}file=gfs.t${cc}z.pgrb2.0p25.f0${fhr}&all_lev=on&all_var=on&subregion=&leftlon=${ll}&rightlon=${rl}&toplat=${tl}&bottomlat=${bl}&dir=%2Fgfs.${yyyy1}${mm1}${dd1}%2F${cc}%2Fatmos"
     else
-      wget -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${gfilter_server}file=gfs.t${cc}z.pgrb2.0p25.f${fhr}&all_lev=on&all_var=on&subregion=&leftlon=${ll}&rightlon=${rl}&toplat=${tl}&bottomlat=${bl}&dir=%2Fgfs.${yyyy1}${mm1}${dd1}%2F${cc}%2Fatmos"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${gfilter_server}file=gfs.t${cc}z.pgrb2.0p25.f${fhr}&all_lev=on&all_var=on&subregion=&leftlon=${ll}&rightlon=${rl}&toplat=${tl}&bottomlat=${bl}&dir=%2Fgfs.${yyyy1}${mm1}${dd1}%2F${cc}%2Fatmos"
     fi
   sleep 1
   done
@@ -62,11 +62,11 @@ then
   for fhr in `seq 0 ${step} ${lengthhour}`
   do
     if [[ ${fhr} -lt "10" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${nccf_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/gfs.t${cc}z.pgrb2.0p25.f00${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${nccf_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/gfs.t${cc}z.pgrb2.0p25.f00${fhr}"
     elif [[ ${fhr} -ge "10" ]] && [[ ${fhr} -lt "100" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${nccf_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/gfs.t${cc}z.pgrb2.0p25.f0${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${nccf_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/gfs.t${cc}z.pgrb2.0p25.f0${fhr}"
     else
-      wget -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${nccf_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/gfs.t${cc}z.pgrb2.0p25.f${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${nccf_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/gfs.t${cc}z.pgrb2.0p25.f${fhr}"
     fi
   sleep 1
   done
@@ -76,11 +76,11 @@ then
   for fhr in `seq 0 ${step} ${lengthhour}`
   do
     if [[ ${fhr} -lt "10" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${para_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/atmos/gfs.t${cc}z.pgrb2.0p25.f00${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${para_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/atmos/gfs.t${cc}z.pgrb2.0p25.f00${fhr}"
     elif [[ ${fhr} -ge "10" ]] && [[ ${fhr} -lt "100" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${para_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/atmos/gfs.t${cc}z.pgrb2.0p25.f0${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${para_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/atmos/gfs.t${cc}z.pgrb2.0p25.f0${fhr}"
     else
-      wget -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${para_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/atmos/gfs.t${cc}z.pgrb2.0p25.f${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${para_server}gfs.${yyyy1}${mm1}${dd1}/${cc}/atmos/gfs.t${cc}z.pgrb2.0p25.f${fhr}"
     fi
   sleep 1
   done
@@ -92,11 +92,11 @@ then
   for fhr in `seq 0 ${step} ${lengthhour}`
   do
     if [[ ${fhr} -lt "10" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f00${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f00${fhr}"
     elif [[ ${fhr} -ge "10" ]] && [[ ${fhr} -lt "100" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f0${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f0${fhr}"
     else
-      wget -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f${fhr}"
     fi
   sleep 1
   done
@@ -105,11 +105,11 @@ else
   for fhr in `seq 0 ${step} ${lengthhour}`
   do
     if [[ ${fhr} -lt "10" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f00${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f00${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f00${fhr}"
     elif [[ ${fhr} -ge "10" ]] && [[ ${fhr} -lt "100" ]]; then
-      wget -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f0${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f0${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f0${fhr}"
     else
-      wget -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f${fhr}"
+      wget --no-check-certificate -O gfs.t${cc}z.pgrb2.0p25.f${fhr} -nc "${ems_server}${yyyy1}${mm1}${dd1}/grib.t${cc}z/${yyems}${mm1}${dd1}${cc}.gfs.t${cc}z.0p25.pgrb2f${fhr}"
     fi
   sleep 1
   done
