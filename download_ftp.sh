@@ -15,7 +15,7 @@
 #    materials provided with the distribution                #
 # 3. Damage, loss, or disruption caused by the use of this   #
 #    script beyond the author's responsibility               #
-# Credit to: Ajie Linarka                                    #
+# Credit to: Ajie Linarka, Dian H dan Husein                 #
 # 24 May 2023                                                #
 # - add local ip address ftp://202.90.199.205                #
 ##############################################################
