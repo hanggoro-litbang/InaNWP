@@ -96,7 +96,7 @@ export domain_list="${upp_dom}"
 #export RUN_COMMAND="${POSTEXEC}/unipost.exe "
 
 # Parallel command examples:
-export RUN_COMMAND="mpiexec.hydra -np 20 ${POSTEXEC}/unipost.exe "
+export RUN_COMMAND="mpiexec.hydra -nolocal -np 20 ${POSTEXEC}/unipost.exe "
 #export RUN_COMMAND="mpirun.lsf ${POSTEXEC}/unipost.exe "
 #export RUN_COMMAND="mpiexec_mpt ${POSTEXEC}/unipost.exe "
 
